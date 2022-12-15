@@ -6,5 +6,8 @@ class AppImagesPaths {
   static const String on____boarding___Image = path + "Artwork.png";
   static const String on____boarding1___Image = path + "Artwork2.png";
   static const String on____boarding2___Image = path + "Artwork3.png";
+   static const String login____fb___Image = path + "fb.png";
+      static const String login____google___Image = path + "google.png";
+   
    
 }

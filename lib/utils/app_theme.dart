@@ -22,6 +22,8 @@ class MyTheme {
           color: Colors.black,
         ),
       ),
+     disabledBorder: UnderlineInputBorder(
+              borderSide: BorderSide(color: Colors.black)),
       focusedBorder: UnderlineInputBorder(
         borderSide: BorderSide(color: Colors.black, width: 2.0),
       ),

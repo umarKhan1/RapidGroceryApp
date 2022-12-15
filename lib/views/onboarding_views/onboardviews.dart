@@ -10,7 +10,6 @@ class OnBoardViews extends StatefulWidget {
 class _OnBoardViewsState extends State<OnBoardViews> {
   late PageController controller;
   int currentPage = 0;
-
   @override
   void initState() {
     controller = PageController();
@@ -21,36 +20,35 @@ class _OnBoardViewsState extends State<OnBoardViews> {
   Widget build(BuildContext context) {
     var height = MediaQuery.of(context).size.height / 100;
     var width = MediaQuery.of(context).size.width / 100;
-
     debugPrint(height.toString() + width.toString());
     return Scaffold(
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-          child: Column(
-            
+          child: ListView(
+        
             children: [
-            
             SizedBox(
               height: 77 * height,
               child: PageView.builder(
-                
+                  controller: controller,
                   itemCount: OnBoadingModel.onboardingList.length,
-                       physics: const BouncingScrollPhysics(),
-                    onPageChanged: (value) => setState(() => currentPage = value),
+                  physics: const BouncingScrollPhysics(),
+                  
+                  onPageChanged: (value) => setState(() => currentPage = value),
                   itemBuilder: ((context, index) {
                     return Column(
                       children: [
-                    Row(
-                          mainAxisSize: MainAxisSize.max,
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-
-           children:  List.generate(3, (index) => lineWidget(context, currentPage, index))
-                    ),
-                    
-              SizedBox(
-                height: 15.4 * height,
-              ),
+                        Row(
+                            mainAxisSize: MainAxisSize.max,
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: List.generate(
+                                3,
+                                (index) =>
+                                    lineWidget(context, currentPage, index))),
+                        SizedBox(
+                          height: 15.4 * height,
+                        ),
                         Container(
                           height: 35 * height,
                           decoration: BoxDecoration(
@@ -65,7 +63,8 @@ class _OnBoardViewsState extends State<OnBoardViews> {
                           height: 5.2 * height,
                         ),
                         TextWidget(
-                            OnBoadingModel.onboardingList[index].title.toString(),
+                            OnBoadingModel.onboardingList[index].title
+                                .toString(),
                             false,
                             FontWeight.bold,
                             2,
@@ -89,10 +88,25 @@ class _OnBoardViewsState extends State<OnBoardViews> {
                     );
                   })),
             ),
-            const Spacer(),
-            buttonWidget(
-                context: context,
-                text: AppStrings.onBoarding______buttton____next__text_)
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal:58.0),
+              child: buttonWidget(
+                  onPressed: () {
+                    if (currentPage == 2) {
+                      AppNavigation.navigateReplacement(context,   LoginView());
+                    } else {
+                      controller.nextPage(
+                        duration: const Duration(milliseconds: 200),
+                        curve: Curves.easeIn,
+                      );
+                    }
+                  },
+                  context: context,
+                  text: currentPage == 2
+                      ? AppStrings.onBoarding2___last__button
+                      : AppStrings.onBoarding______buttton____next__text_),
+            )
           ]),
         ),
       ),

@@ -4,5 +4,6 @@ import 'package:rapidgorcery/widgets/widgets_imports.dart';
 
 import '../../model/on_boarding_model.dart';
 import '../../utils/app_strings.dart';
+import '../authviews/authimports.dart';
 import 'onboardwidget/linewidget.dart';
 part 'onboardviews.dart';
