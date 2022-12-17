@@ -75,10 +75,20 @@ class LoginView extends StatelessWidget {
             SizedBox(
               height: 2.8 * height,
             ),
-            const Align(
+            Align(
               alignment: Alignment.bottomRight,
-              child: TextWidget(AppStrings.loginview________forgetpass__String,
-                  false, FontWeight.w400, 1.1, Colors.green, TextAlign.end),
+              child: InkWell(
+                onTap: () {
+                  AppNavigation.navigateTo(context, ForgotPasswordView());
+                },
+                child: TextWidget(
+                    AppStrings.loginview________forgetpass__String,
+                    false,
+                    FontWeight.w400,
+                    1.1,
+                    Theme.of(context).primaryColor,
+                    TextAlign.end),
+              ),
             ),
             SizedBox(
               height: 5.6 * height,
@@ -86,7 +96,9 @@ class LoginView extends StatelessWidget {
             buttonWidget(
                 context: context,
                 text: AppStrings.login_____SignIn__Text,
-                onPressed: () {}),
+                onPressed: () {
+                  AppNavigation.navigateReplacement(context, const HomeViews());
+                }),
             SizedBox(
               height: 8.2 * height,
             ),
@@ -142,8 +154,8 @@ class LoginView extends StatelessWidget {
                   width: 5,
                 ),
                 InkWell(
-                  onTap: (){
-                    AppNavigation.navigateTo(context, const  SignupView());
+                  onTap: () {
+                    AppNavigation.navigateTo(context, const SignupView());
                   },
                   child: TextWidget(
                       AppStrings.loginview________signup__String,

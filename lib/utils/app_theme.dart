@@ -14,6 +14,10 @@ class MyTheme {
         headline3: TextStyle(
           color: Colors.white,
         )),
+bottomNavigationBarTheme: const BottomNavigationBarThemeData(
+  selectedItemColor: Colors.green,
+  unselectedItemColor: Colors.grey
+),
     toggleButtonsTheme: const ToggleButtonsThemeData(color: Color(0xffdc3b50)),
     iconTheme: const IconThemeData(color: Colors.red),
     inputDecorationTheme: const InputDecorationTheme(
@@ -28,6 +32,7 @@ class MyTheme {
         borderSide: BorderSide(color: Colors.black, width: 2.0),
       ),
       fillColor: Colors.white,
+
     ),
   );
 }

@@ -18,9 +18,9 @@ class TextWidget extends StatelessWidget {
       textScaleFactor: textScale,
       textAlign: textAlign,
       style: TextStyle(
-       
+
           decoration:
-              isUnderline ? TextDecoration.underline : TextDecoration.none,
+              isUnderline ? TextDecoration.lineThrough : TextDecoration.none,
           fontWeight: fontWeight,
           color: textColor,
         ),

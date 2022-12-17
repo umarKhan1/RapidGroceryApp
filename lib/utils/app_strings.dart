@@ -28,5 +28,13 @@ static const String signup___Otp________text__String = "Verification";
 static const String signup___Otp_____subText__String = "We have just sent your email an OTP, please enter below to verify";
 static const String signup___Otp_____resend__String = "Resend on ";
 static const String signup___Otp_____complete__String = "Compelete";
+static const String forgot____Password_String = "Forgot Password";
+static const String forgot____Password____sub____String = "Please type your email or phone number below and we can help you reset password";
+static const String forgot____Password____button____String = "Send";
+static const String home___TakePick___text = "Take Your Pick";
+static const String home___VIEW__ALL___text = "View All";
+ static const String home___BreakFast___text = "Breakfast";
+  static const String home___BreakFast_subTexrt__text = "Breakfast is widely acknowledged to be the most important meal of the day.";
+
 }
 

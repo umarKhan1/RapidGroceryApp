@@ -11,10 +11,13 @@ import 'package:rapidgorcery/utils/images_string.dart';
 import 'package:rapidgorcery/widgets/button_widget.dart';
 import 'package:rapidgorcery/widgets/widgets_imports.dart';
 import '../../utils/app_strings.dart';
+import '../../widgets/appbar_widget.dart';
 import '../../widgets/textformfield_widget.dart';
+import '../homeviews/home_imports.dart';
 import 'authwidgets/line_widget.dart';
 import 'authwidgets/social_btn_widget.dart';
 
 part 'loginviews.dart';
 part 'signupviews.dart';
 part 'otp_verfication.dart';
+part 'forgot_pass_view.dart';

@@ -25,16 +25,13 @@ class _OnBoardViewsState extends State<OnBoardViews> {
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
-          child: ListView(
-        
-            children: [
+          child: ListView(children: [
             SizedBox(
               height: 77 * height,
               child: PageView.builder(
                   controller: controller,
                   itemCount: OnBoadingModel.onboardingList.length,
                   physics: const BouncingScrollPhysics(),
-                  
                   onPageChanged: (value) => setState(() => currentPage = value),
                   itemBuilder: ((context, index) {
                     return Column(
@@ -88,13 +85,12 @@ class _OnBoardViewsState extends State<OnBoardViews> {
                     );
                   })),
             ),
-
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal:58.0),
+              padding: const EdgeInsets.symmetric(horizontal: 58.0),
               child: buttonWidget(
                   onPressed: () {
                     if (currentPage == 2) {
-                      AppNavigation.navigateReplacement(context,   LoginView());
+                      AppNavigation.navigateReplacement(context, LoginView());
                     } else {
                       controller.nextPage(
                         duration: const Duration(milliseconds: 200),
