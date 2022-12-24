@@ -1,0 +1,16 @@
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:rapidgorcery/utils/app_strings.dart';
+import 'package:rapidgorcery/utils/images_string.dart';
+import 'package:rapidgorcery/views/checkout_addtocart_view/checkout_addtocart_widget/checkout_button.dart';
+import 'package:rapidgorcery/views/checkout_addtocart_view/checkout_addtocart_widget/order__bill__widget.dart';
+import 'package:rapidgorcery/widgets/widgets_imports.dart';
+import 'checkout_addtocart_widget/checkout_vertical_list.dart';
+import 'checkout_addtocart_widget/date_time_setcheck_out.dart';
+import 'checkout_addtocart_widget/dialog_confrim.dart';
+import 'checkout_addtocart_widget/location_widget.dart';
+import 'map_view/map_search_widget.dart';
+part './check_out_view.dart';
+part 'chnage_adress_view.dart';
+part './addtocart_view.dart';
+part 'map_view/googlemapview.dart';

@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:rapidgorcery/utils/images_string.dart';
+import 'package:rapidgorcery/views/checkout_addtocart_view/checkout_imports.dart';
 
+import 'views/fav_view/fav_imports.dart';
 import 'views/homeviews/home_imports.dart';
+import 'views/profile_view/profile_imports.dart';
+import 'views/search_views/search_imports.dart';
 
 class BottomScreen extends StatefulWidget {
   static const routeName = '/BottomScreen';
@@ -52,8 +56,11 @@ class _BottomScreenState extends State<BottomScreen> {
   @override
   Widget build(BuildContext context) {
     final List<Widget> pages = <Widget>[
-   const HomeViews()
-   
+      const HomeViews(),
+      const SearchView(),
+      const AddToCartView(),
+      const FavViews(),
+      const ProfileView(),
     ];
     return WillPopScope(
       onWillPop: showExitPopup,
@@ -83,46 +90,64 @@ class _BottomScreenState extends State<BottomScreen> {
             elevation: 2.0,
             items: [
               BottomNavigationBarItem(
-                label: "Recipes",
-                   icon: Image.asset(AppImagesPaths.bottom____boook___Image,
-
-                  color: Theme.of(context)
-                        .bottomNavigationBarTheme
-                        .selectedItemColor,
-                  )
-              ),
+                  label: "Recipes",
+                  icon: Image.asset(
+                    AppImagesPaths.bottom____boook___Image,
+                    color: currentNav == 0
+                        ? Theme.of(context)
+                            .bottomNavigationBarTheme
+                            .selectedItemColor
+                        : Theme.of(context)
+                            .bottomNavigationBarTheme
+                            .unselectedItemColor,
+                  )),
               BottomNavigationBarItem(
                   label: "Search",
-                 icon: Image.asset(AppImagesPaths.bottom____search___Image,
-                  color: Theme.of(context)
-                        .bottomNavigationBarTheme
-                        .unselectedItemColor,
+                  icon: Image.asset(
+                    AppImagesPaths.bottom____search___Image,
+                    color: currentNav == 1
+                        ? Theme.of(context)
+                            .bottomNavigationBarTheme
+                            .selectedItemColor
+                        : Theme.of(context)
+                            .bottomNavigationBarTheme
+                            .unselectedItemColor,
                   )),
               BottomNavigationBarItem(
                   label: "Cart",
-                  icon: Image.asset(AppImagesPaths.bottom____basket___Image,
-                  color: Theme.of(context)
-                        .bottomNavigationBarTheme
-                        .unselectedItemColor,
+                  icon: Image.asset(
+                    AppImagesPaths.bottom____basket___Image,
+                    color: currentNav == 2
+                        ? Theme.of(context)
+                            .bottomNavigationBarTheme
+                            .selectedItemColor
+                        : Theme.of(context)
+                            .bottomNavigationBarTheme
+                            .unselectedItemColor,
                   )),
-                     
               BottomNavigationBarItem(
                   label: "Favourites",
-
-                  icon: Image.asset(AppImagesPaths.bottom____fav___Image,
-                  color: Theme.of(context)
-                        .bottomNavigationBarTheme
-                        .unselectedItemColor,
+                  icon: Image.asset(
+                    AppImagesPaths.bottom____fav___Image,
+                    color: currentNav == 3
+                        ? Theme.of(context)
+                            .bottomNavigationBarTheme
+                            .selectedItemColor
+                        : Theme.of(context)
+                            .bottomNavigationBarTheme
+                            .unselectedItemColor,
                   )),
-                                
               BottomNavigationBarItem(
                   label: "Profile",
-                  
-                  icon: Image.asset(AppImagesPaths.bottom____profile___Image,
-                  
-                  color: Theme.of(context)
-                        .bottomNavigationBarTheme
-                        .unselectedItemColor,
+                  icon: Image.asset(
+                    AppImagesPaths.bottom____profile___Image,
+                    color: currentNav == 4
+                        ? Theme.of(context)
+                            .bottomNavigationBarTheme
+                            .selectedItemColor
+                        : Theme.of(context)
+                            .bottomNavigationBarTheme
+                            .unselectedItemColor,
                   ))
             ],
             onTap: (index) {

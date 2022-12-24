@@ -22,7 +22,7 @@ Widget crousalSliderWidget() {
                           const BorderRadius.all(Radius.circular(5.0)),
                       child: Stack(
                         children: <Widget>[
-                          Image.network(item, fit: BoxFit.cover, width: 1000.0),
+                          Image.network(item, fit: BoxFit.contain, width: 1000.0),
                           Align(
                             alignment: Alignment.bottomCenter,
                             child: DotsIndicator(

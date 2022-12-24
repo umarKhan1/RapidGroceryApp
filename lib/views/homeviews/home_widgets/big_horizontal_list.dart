@@ -10,21 +10,21 @@ Widget homeBigHorizontalList({BuildContext? context}) {
   double width = MediaQuery.of(context).size.width / 100;
 
   return SizedBox(
-     height: 24.1 * height,
+    height: 24.1 * height,
     child: ListView.builder(
-      shrinkWrap: true,
-      scrollDirection: Axis.horizontal,
-      physics: const BouncingScrollPhysics(),
+        shrinkWrap: true,
+        scrollDirection: Axis.horizontal,
+        physics: const BouncingScrollPhysics(),
         itemCount: HomeBigHorizontalList.homeBigList.length,
         itemBuilder: ((context, index) {
           return Row(
             children: [
               InkWell(
-                   onTap: (() => AppNavigation.navigateTo(context, const  DetailView())),
+                onTap: (() =>
+                    AppNavigation.navigateTo(context, const DetailView())),
                 child: Stack(
                   children: [
                     Container(
-                     
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         color: Colors.grey,
@@ -33,7 +33,8 @@ Widget homeBigHorizontalList({BuildContext? context}) {
                         borderRadius: BorderRadius.circular(15),
                         child: FancyShimmerImage(
                           boxFit: BoxFit.cover,
-                          imageUrl: HomeBigHorizontalList.homeBigList[index].imagePath!,
+                          imageUrl: HomeBigHorizontalList
+                              .homeBigList[index].imagePath!,
                           errorWidget: Image.network(
                               'https://i0.wp.com/www.dobitaobyte.com.br/wp-content/uploads/2016/02/no_image.png?ssl=1'),
                         ),
@@ -91,7 +92,9 @@ Widget homeBigHorizontalList({BuildContext? context}) {
                   ],
                 ),
               ),
-            const SizedBox(width: 10,),
+              const SizedBox(
+                width: 10,
+              ),
             ],
           );
         })),
