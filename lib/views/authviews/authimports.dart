@@ -21,3 +21,4 @@ part 'loginviews.dart';
 part 'signupviews.dart';
 part 'otp_verfication.dart';
 part 'forgot_pass_view.dart';
+part 'reset_password.dart';

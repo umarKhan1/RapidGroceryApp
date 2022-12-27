@@ -1,16 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:rapidgorcery/views/order_view/order_imports.dart';
 
 import '../../../widgets/widgets_imports.dart';
 
 Widget profileListTileWidget(
-    {String? assetPAth, String? name, BuildContext? context, bool? colorandIconShow}) {
+    {String? assetPAth, String? name, BuildContext? context, bool? colorandIconShow, VoidCallback? onTap}) {
   return Padding(
     padding: const EdgeInsets.symmetric(horizontal: 11.0, vertical: 0),
     child: InkWell(
-      onTap: (){
-      AppNavigation.navigateTo(context, const  OrderView());
-      },
+      onTap: onTap,
       child: ListTile(
         dense: true,
         leading: Container(

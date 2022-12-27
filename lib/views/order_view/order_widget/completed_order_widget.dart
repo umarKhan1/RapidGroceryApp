@@ -19,7 +19,7 @@ Widget completedOrderWidget({BuildContext? context}) {
         child: Container(
             height: 21 * height,
             padding: const EdgeInsets.all(10),
-            width: MediaQuery.of(context!).size.width,
+            width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10),
             ),

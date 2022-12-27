@@ -20,8 +20,8 @@ Widget categoriesHorizontalList({BuildContext? context}) {
               InkWell(
                 onTap: ()=> AppNavigation.navigateTo(context, const CategoriesViews()),
                 child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 5),
-                  width: 36.1 * width,
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  width: 34.1 * width,
                   height: 7 * height,
                   decoration: BoxDecoration(
                       color: CategoriesModel.catList[index].color,

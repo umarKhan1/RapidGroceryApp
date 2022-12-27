@@ -119,10 +119,22 @@ class ProfileView extends StatelessWidget {
                         thickness: 1,
                         color: Colors.grey.withOpacity(0.3),
                       )),
-                     profileListTileWidget(
+
+   profileListTileWidget(
+                      assetPAth: AppImagesPaths.profile___delivery_about__us_,
+                      name: AppStrings.reset___password__view,
+                      context: context, 
+                      colorandIconShow: false),
+                          Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: Divider(
+                        thickness: 1,
+                        color: Colors.grey.withOpacity(0.3),
+                      )),                     profileListTileWidget(
                       assetPAth: AppImagesPaths.profile___delivery_log_out_,
                       name: AppStrings.profile__User__logout,
                       context: context, 
+                    onTap: (){},
                       colorandIconShow: true),
                 ]),
               ),

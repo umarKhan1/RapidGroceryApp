@@ -92,21 +92,26 @@ class AppStrings {
   static const String save__text = "Save";
   static const String back__Text = "Back";
   static const String add__new__address_text___ = "Add New Address";
-    static const String order__Sucesss_ = "Order Success";
-      static const String aorder__Sucessss__text___ = "Your order is being processed by the system, you can see the progress at";
-      
-      static const String my___order = "My Order";
-        static const String fav____View__appbar__text = "Favorites";
-         static const String profile__User___name = "Todd Benson";
-       
-          static const String profile__User___email = "Freeslab88@gmail.com";
-          static const String profile__User___account__information = "Account Informations";
-           static const String profile__User___account__My_order= "My Order";
-            static const String profile__User___DeliverAddress = "Delivery Address";
-             static const String profile__User___account___setting = "Settings";
-              static const String profile__User___account__help__center = "Help Center";
-               static const String profile__User___account__about__us = "About Us";
-                         static const String profile__User___search = "Search";
-                              static const String profile__User__logout = "Log Out";
+  static const String order__Sucesss_ = "Order Success";
+  static const String aorder__Sucessss__text___ =
+      "Your order is being processed by the system, you can see the progress at";
 
+  static const String my___order = "My Order";
+  static const String fav____View__appbar__text = "Favorites";
+  static const String profile__User___name = "Todd Benson";
+
+  static const String profile__User___email = "Freeslab88@gmail.com";
+  static const String profile__User___account__information =
+      "Account Informations";
+  static const String profile__User___account__My_order = "My Order";
+  static const String profile__User___DeliverAddress = "Delivery Address";
+  static const String profile__User___account___setting = "Settings";
+  static const String profile__User___account__help__center = "Help Center";
+  static const String profile__User___account__about__us = "About Us";
+  static const String profile__User___search = "Search";
+  static const String profile__User__logout = "Log Out";
+    static const String reset___password__view = "Reset Password";
+    static const String reset__pass___decription = "And now, you can type your new password and confirm it below";
+        static const String reset__pass___newpass = "New Password";
+       static const String reset__pass___confirmpass = "Confirm Password";
 }

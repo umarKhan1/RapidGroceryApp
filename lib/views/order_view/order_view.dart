@@ -47,7 +47,7 @@ class _OrderViewState extends State<OrderView> with TickerProviderStateMixin  {
               indicatorColor: Theme.of(context).primaryColor,
               labelColor: Theme.of(context).primaryColor,
               unselectedLabelColor:Colors.black ,
-              padding: EdgeInsets.only(right: 140),
+              padding: const EdgeInsets.only(right: 140),
               indicatorSize: TabBarIndicatorSize.label,
               controller: _tabController,
               isScrollable: true,
